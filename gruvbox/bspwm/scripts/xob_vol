@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$(pamixer --get-mute)" = "true" ]; then
+    echo "$(pamixer --get-volume)!" > ~/.config/xob/xobpipe
+else
+    echo "$(pamixer --get-volume)" > ~/.config/xob/xobpipe
+fi
